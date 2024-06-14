@@ -89,14 +89,9 @@ body {
     transition: transform 0.3s ease-in-out;
     cursor: pointer;
     text-align: center;
-    
-  }
-  #project-1{
     background-color: #fbf3ff;
   }
-  #project-2{
-    background-color: #fbf3ff;
-  }
+
   .project-container{
       padding: 0px 200px 150px 200px;
       
@@ -109,7 +104,8 @@ body {
     margin: 0 auto; /* Center the project details horizontally */
     text-align: center;
   }
-  #project-2{
+  
+  #project-3{
     width: 30%; /* Adjust the width as needed */
     margin: 0 auto; /* Center the project details horizontally */
   }
@@ -150,9 +146,14 @@ body {
     border-radius: 30%;
     animation: spin 2s infinite linear; /* Apply animation */
   }
+  .sbp-image{
+    max-width: 30%;
+  }
+  .sbp-images{
+    max-width: 50%;
+  }
   .project-image{
     max-width: 100%;
-    height: auto;
   }
 
   .github-icon, .email-icon, .linkedin-icon {
@@ -190,5 +191,41 @@ margin-bottom: 10px; /* Add spacing between icons */
     }
     100% {
       transform: rotate(360deg); /* Rotate the icon 360 degrees */
+    }
+  }
+  @media (max-width: 768px) {
+    .header {
+        height: 60vh; 
+    }
+    .header-title, .cirqus-title {
+        font-size: 20px; 
+        padding: 100px 50px; 
+    }
+    .navbar {
+        flex-direction: column; 
+        align-items: center; 
+    }
+    .navbar li {
+        margin-bottom: 10px; 
+    }
+    .project-container {
+        padding: 20px; 
+    }
+    .project-details, #project-3 {
+        width: 90%; 
+    }
+    .grid {
+        grid-template-columns: 1fr; 
+    }
+    .icon-container {
+        width: 80px; 
+        height: 80px;
+    }
+    .icon {
+        width: 50%; 
+        height: 50%;
+    }
+    .github-icon, .email-icon, .linkedin-icon {
+        width: 25px; 
     }
   }
