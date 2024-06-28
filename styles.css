@@ -1,29 +1,47 @@
+:root {
+  --font-family-body: 'Roboto', sans-serif;
+  --font-family-heading: 'Roboto', sans-serif;
+  --font-weight-normal: 400;
+  --font-weight-bold: 700;
+  --font-weight-light: 300;
+}
+
+
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: var(--font-family-body);
+  font-weight: var(--font-weight-normal);
     margin: 0; /* Remove default margin */
     padding: 0; /* Remove default padding */
     background-color:#fffce8;
 
   }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-family-heading);
+    font-weight: var(--font-weight-bold);
+}
 
+p {
+    font-family: var(--font-family-body);
+    font-weight: var(--font-weight-light);
+    text-align: center;
+}
   
 
-  .header {
+  .header{
    
     background-color: #d5ebff; /* Blue color for header background */
     height: 80vh; /* Fill the top quarter of the screen */
   
   }
-  .header h1{
-    text-align: center;
-  }
-  .cirqus-header {
-    height: 40vh;
+  .cirqus-header, .sbp-header, .flashg-header{
     background-color: #d5ebff;
+    height: 60vh;
   }
-  .cirqus-header h1{
+
+  .header h1, .cirqus-header h1, .sbp-header h1, .flashg-header h1{
     text-align: center;
   }
+
   .navbar {
     display: flex;
     list-style-type: none; /* Remove default list styles */
@@ -50,18 +68,12 @@ body {
     color: #4285f4; /* Change color on hover */
   }
 
-  .header-title {
+  .header-title, .cirqus-title, .sbp-title, .flashg-title {
     font-size: 24px; /* Increased font size for larger header */
     color: #333; /* White color for header text */
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
     padding: 150px 200px 150px 200px;
  
-  }
-  .cirqus-title {
-    font-size: 24px; /* Increased font size for larger header */
-    color: #333; /* White color for header text */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
-    
   }
 
   .name {
@@ -80,7 +92,11 @@ body {
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     grid-gap: 20px;
   }
-
+  .project-link {
+    display: block;
+    text-decoration: none;
+    color: inherit; /* Inherit color to keep text color unchanged */
+  }
   .project {
     padding: 20px;
     margin-bottom: 50px;
@@ -89,7 +105,7 @@ body {
     transition: transform 0.3s ease-in-out;
     cursor: pointer;
     text-align: center;
-    background-color: #fbf3ff;
+    background-color: #fbf3ff; 
   }
 
   .project-container{
@@ -156,12 +172,25 @@ body {
     max-width: 100%;
   }
 
+  /*tag styles*/
+  .tags {
+    margin: 10px 0;
+  }
+  
+  .tag {
+    display: inline-block;
+    background-color: #d5ebff;
+    color: #333;
+    padding: 5px 10px;
+    margin: 5px;
+    border-radius: 5px;
+    font-size: 14px;
+  }
+
   .github-icon, .email-icon, .linkedin-icon {
 width: 30px; /* Adjust icon size */
 }
-p{
-text-align: center;
-}
+
 .github-icon, .email-icon, .linkedin-icon {
 margin: 20px 20px 20px 20px;
 opacity: 0.5; /* Set default opacity to 50% */
